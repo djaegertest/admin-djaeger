@@ -1,0 +1,20 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .input-label {
+    @apply font-semibold;
+  }
+  .floating {
+    @apply absolute top-0 p-2;
+  }
+
+  .focused .floating {
+    @apply -mt-8;
+  }
+
+  .input-wrapper {
+    @apply relative flex items-center;
+  }
+}
