@@ -2,11 +2,7 @@ const { borderWidth } = require("tailwindcss/defaultTheme");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: [
-    "./vendor/laravel/jetstream/**/*.blade.php",
-    "./storage/framework/views/*.php",
-    "./resources/views/**/*.blade.php"
-  ],
+  purge: ["./resources/views/**/*.html"],
 
   theme: {
     extend: {
@@ -38,6 +34,16 @@ module.exports = {
       "group-focus",
       "group-hover",
       "checked"
+    ],
+    cursor: [
+      "responsive",
+      "hover",
+      "focus",
+      "disabled",
+      "group-focus",
+      "group-hover",
+      "checked",
+      "disabled"
     ]
   },
 

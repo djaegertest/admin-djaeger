@@ -12,18 +12,18 @@
     />
     <link rel="stylesheet" href="/public/css/app.css" />
   </head>
-  <body class="relative">
+  <body>
     <main class="absolute w-full h-screen overflow-y-hidden">
       <div class="flex flex-col w-full h-full lg:flex-row">
         <div
           class="flex flex-col items-center justify-center w-full h-1/2 lg:flex-row lg:h-full lg:w-2/3"
         >
-          <div class="p-4 lg:w-1/2">
+          <figure class="p-4 lg:w-1/2">
             <img src="" alt="illust, welcome" class="illust" />
-          </div>
+          </figure>
           <div class="flex flex-col gap-2 p-4 text-center lg:w-1/2">
-            <span id="quote" class="text-2xl font-bold text-white"></span>
-            <span id="author" class="text-lg font-semibold text-white"></span>
+            <p id="quote" class="text-2xl font-bold text-white"></p>
+            <p id="author" class="text-lg font-semibold"></p>
           </div>
         </div>
         <div
@@ -33,7 +33,7 @@
             id="sign-in-modal-open"
             class="px-6 py-4 text-xl font-bold text-white bg-blue-600 rounded-full focus:outline-none lg:hidden"
           >
-            Sign In
+            Click Me !
           </button>
           <div
             class="absolute z-10 w-full h-full transition-all duration-1000 ease-in-out transform translate-y-full bg-white rounded-t-3xl lg:translate-y-0 lg:relative lg:rounded-t-none lg:z-0 lg:bg-transparent"
@@ -41,14 +41,14 @@
           >
             <div class="w-full h-full flex-flex-col">
               <div class="flex items-center justify-end p-4 lg:hidden">
-                <button id="sign-in-modal-close" class="focus:outline-none">
+                <button id="sign-in-modal-close" class="p-4 focus:outline-none">
                   <i class="fas fa-times fa-lg"></i>
                 </button>
               </div>
               <div
                 class="flex flex-col w-full h-full gap-6 p-4 lg:justify-between"
               >
-                <div
+                <article
                   class="flex flex-col items-center gap-3 lg:justify-center lg:h-1/2"
                 >
                   <h1
@@ -59,18 +59,14 @@
                   <h2 class="text-lg font-semibold opacity-75 lg:text-2xl">
                     to get started
                   </h2>
-                </div>
+                </article>
                 <div class="flex justify-center h-1/2">
-                  <form
-                    action="{{ route('login.attempt') }}"
-                    method="post"
-                    class="flex flex-col gap-4"
-                  >
+                  <form action="" method="post" class="flex flex-col gap-4">
                     <div class="flex flex-col w-full gap-8">
                       <div class="input-wrapper">
                         <input
                           type="email"
-                          class="w-full px-3 py-2 transition-all bg-gray-200 border-b-2 border-black rounded-lg outline-none opacity-80 focus:border-blue-800"
+                          class="w-full px-3 py-2 transition-all bg-gray-200 bg-opacity-50 border-b-2 border-black rounded-lg outline-none focus:border-blue-800"
                           id="email"
                           name="email"
                           required
@@ -84,7 +80,7 @@
                       <div class="input-wrapper">
                         <input
                           type="password"
-                          class="w-full px-3 py-2 transition-all bg-gray-200 border-b-2 border-black rounded-lg outline-none opacity-80 focus:border-blue-800"
+                          class="w-full px-3 py-2 transition-all bg-gray-200 bg-opacity-50 border-b-2 border-black rounded-lg outline-none focus:border-blue-800"
                           id="password"
                           name="password"
                           required
@@ -132,11 +128,12 @@
         </div>
       </div>
     </main>
+
     <div
       id="overlay"
       class="absolute top-0 hidden w-full h-screen bg-black opacity-50"
     ></div>
-    <div class="lg:hidden">
+    <figure class="lg:hidden">
       <svg viewBox="0 0 1320 1600">
         <path
           d="M0,1350 C220,1250,440,1250,660,1350 C880,1450,1100,1450,1320,1350 L1320,0 L0,0"
@@ -154,8 +151,8 @@
           class="opacity-25 purple-wave-sm"
         />
       </svg>
-    </div>
-    <div class="hidden lg:block">
+    </figure>
+    <figure class="hidden lg:block">
       <svg viewBox="0 0 1320 600">
         <path
           d="M0,450 C220,350,440,350,660,450 C880,550,1100,550,1320,450 L1320,0 L0,0"
@@ -173,7 +170,7 @@
           class="opacity-25 purple-wave-lg"
         />
       </svg>
-    </div>
+    </figure>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"

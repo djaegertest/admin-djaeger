@@ -1,4 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const animateBackground = (size, dKeyframes) => {
+    anime
+      .timeline({
+        direction: "alternate",
+        duration: 3000,
+        loop: true
+      })
+      .add(
+        {
+          targets: ".cyan-wave-" + size,
+          keyframes: dKeyframes,
+          easing: "easeOutQuart"
+        },
+        0
+      )
+      .add(
+        {
+          targets: ".blue-wave-" + size,
+          keyframes: dKeyframes,
+          easing: "easeInQuint"
+        },
+        0
+      )
+      .add(
+        {
+          targets: ".purple-wave-" + size,
+          keyframes: dKeyframes,
+          easing: "easeInQuad"
+        },
+        0
+      );
+  };
+
   const dKeyframesLarge = [
     {
       d:
@@ -9,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "M0,450 C220,540,440,540,660,450 C880,360,1100,360,1320,450 L1320,0 L0,0"
     }
   ];
+
   const dKeyframesSmall = [
     {
       d:
@@ -19,59 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "M0,1350 C220,1500,440,1500,660,1350 C880,1220,1100,1220,1320,1350 L1320,0 L0,0"
     }
   ];
-  const animeTimeline = anime.timeline({
-    direction: "alternate",
-    duration: 3000,
-    loop: true
-  });
-  animeTimeline
-    .add(
-      {
-        targets: ".cyan-wave-lg",
-        keyframes: dKeyframesLarge,
-        easing: "easeOutQuart"
-      },
-      0
-    )
-    .add(
-      {
-        targets: ".blue-wave-lg",
-        keyframes: dKeyframesLarge,
-        easing: "easeInQuint"
-      },
-      0
-    )
-    .add(
-      {
-        targets: ".purple-wave-lg",
-        keyframes: dKeyframesLarge,
-        easing: "easeInQuad"
-      },
-      0
-    );
-  animeTimeline
-    .add(
-      {
-        targets: ".cyan-wave-sm",
-        keyframes: dKeyframesSmall,
-        easing: "easeOutQuart"
-      },
-      0
-    )
-    .add(
-      {
-        targets: ".blue-wave-sm",
-        keyframes: dKeyframesSmall,
-        easing: "easeInQuint"
-      },
-      0
-    )
-    .add(
-      {
-        targets: ".purple-wave-sm",
-        keyframes: dKeyframesSmall,
-        easing: "easeInQuad"
-      },
-      0
-    );
+
+  animateBackground("lg", dKeyframesLarge);
+  animateBackground("sm", dKeyframesSmall);
 });
