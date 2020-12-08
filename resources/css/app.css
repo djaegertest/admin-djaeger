@@ -17,4 +17,12 @@
   .input-wrapper {
     @apply relative flex items-center;
   }
+
+  .is-open {
+    @apply lg:w-5/6 lg:rounded-l-3xl;
+  }
+
+  .is-selected {
+    @apply text-blue-600 bg-white;
+  }
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin DJaeger</title>
+    <link rel="stylesheet" href="/public/css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="relative w-full h-screen overflow-x-hidden">
+      <div
+        id="main-layout"
+        class="absolute w-full h-full transition-all duration-700 ease-in-out transform bg-white lg:right-0"
+      >
+        <header class="flex items-center justify-between w-full p-4">
+          <div class="flex items-center">
+            <button
+              class="hidden lg:block focus:outline-none hover:text-blue-600"
+              id="sidebar-toggler-lg"
+            >
+              <i class="fas fa-bars fa-2x"></i>
+            </button>
+            <button
+              class="lg:hidden focus:outline-none hover:text-blue-600"
+              id="sidebar-toggler-sm"
+            >
+              <i class="fas fa-bars fa-2x"></i>
+            </button>
+          </div>
+          <div class="flex items-center gap-8">
+            <button class="focus:outline-none hover:text-blue-600">
+              <i class="far fa-bell fa-lg"></i>
+            </button>
+            <button class="focus:outline-none">
+              <img
+                src="https://via.placeholder.com/150"
+                alt=""
+                class="w-8 rounded-full"
+              />
+            </button>
+          </div>
+        </header>
+        <main class="p-4">
+          <section
+            class="flex flex-col jsutify-center lg:justify-between lg:flex-row lg:items-center"
+          >
+            <header>
+              <h1 class="text-4xl font-bold lg:text-5xl">Dashboard</h1>
+            </header>
+            <ol class="flex text-lg text-gray-600 lg:text-xl">
+              <li>Dashboard</li>
+            </ol>
+          </section>
+        </main>
+      </div>
+      <aside class="w-full h-full bg-blue-600">
+        <div class="flex items-center justify-center w-1/2 h-full lg:w-1/6">
+          <nav class="w-full">
+            <ul class="pl-3 text-lg font-semibold text-white lg:text-xl">
+              <li
+                class="p-3 rounded-l-full hover:bg-white hover:text-blue-600 is-selected"
+              >
+                <a href="" class="flex items-center gap-3">
+                  <i class="fas fa-tachometer-alt"></i>
+                  Dashboard
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"
+      integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/public/js/controller/sidebarToggleController.js"></script>
+  </body>
+</html>
